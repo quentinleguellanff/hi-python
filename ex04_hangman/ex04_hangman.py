@@ -1,7 +1,7 @@
 import random
 from words import english_words
 
-tentative = 7
+tentative = 10
 indexList = []
 letterList = []
 letter = ''
@@ -12,7 +12,7 @@ listWordToGuess = list(wordToGuess)
 
 
 print("\nBienvenue dans le jeu du Pendu, vous devez devez deviner un mot en anglais !")
-print(f'le mot que vous devez deviner contient { len(wordToGuess) } mots, vous avez '+ tentative +' tentatives pour le trouver ! ')
+print(f'le mot que vous devez deviner contient { len(wordToGuess) } mots, vous avez '+ str(tentative) +' tentatives pour le trouver ! ')
 
 for i in range(len(wordToGuess)):
     strGuessing += '_'
@@ -43,7 +43,7 @@ while strGuessing != wordToGuess and tentative != 0:
             print('le mot à deviner : ' + strGuessing)
         else :
             tentative -= 1
-            if(tentative != 0): 
+            if tentative != 0: 
                 print('\nla lettre '+ letter + " n'est pas présente dans le mot, il vous reste "+ str(tentative) + ' tentatives')
                 print('liste des lettres deja utilisées : '+ strLetterList)
                 print('le mot à deviner : ' + strGuessing)
@@ -51,7 +51,7 @@ while strGuessing != wordToGuess and tentative != 0:
         print("Vous avez déjà entré cette lettre, essayez en une autre !")
         print('liste des lettres deja utilisées : '+ strLetterList)
 
-if(tentative == 0):
+if tentative == 0:
     print('Dommage, vous avez perdu !, le mot à deviner était ' + wordToGuess)
 else:
     print('Bravo ! Vous avez trouvez le mot qui était '+wordToGuess + " vous l'avez trouvé en "+ str(10-tentative) + ' tentatives !')
