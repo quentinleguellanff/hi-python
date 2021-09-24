@@ -1,7 +1,7 @@
-DEFAULT,bitbucket.org,topsecret.server.com
- 45,,
- yes,,
- 9,,
- yes,, no
-, hg,
-,, 50022
+,DEFAULT,bitbucket.org,topsecret.server.com
+ServerAliveInterval , 45,,
+Compression , yes,,
+CompressionLevel , 9,,
+ForwardX11 , yes,, no
+User ,, hg,
+Port ,,, 50022
